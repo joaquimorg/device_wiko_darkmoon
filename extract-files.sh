@@ -11,11 +11,13 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
     if [ ! -d $BASE/$DIR ]; then
 			mkdir -p $BASE/$DIR
     fi
+
     #copy from local folder
     cp ~/dev/android/darkmoon/stockrom/system/$FILE $BASE/$FILE
 
     #copy from device
     #adb pull /system/$FILE $BASE/$FILE
+
 done
 
 ./setup-makefiles.sh
