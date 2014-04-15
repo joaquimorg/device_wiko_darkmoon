@@ -1,12 +1,14 @@
 Device configuration for the Wiko Darkmoon (MT6582)
 ===============================
 
+
 To build first get the files from working phone :
-. $./extract-files.sh
 
-. $. build/envsetup.sh
+$./extract-files.sh
 
-. $brunch cm_darkmoon-eng 
+$. build/envsetup.sh
+
+$brunch cm_darkmoon-eng 
 
 
 
