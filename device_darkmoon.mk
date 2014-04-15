@@ -42,6 +42,8 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/root/init.trace.rc:root/init.trace.rc \
 	$(LOCAL_PATH)/root/meta_init.project.rc:root/meta_init.project.rc \
 	$(LOCAL_PATH)/root/ueventd.rc:root/ueventd.rc \
+	$(LOCAL_PATH)/root/e2fsck:root/sbin/e2fsck \
+	$(LOCAL_PATH)/root/tune2fs:root/sbin/tune2fs \
 	$(LOCAL_PATH)/root/enableswap.sh:root/enableswap.sh
 
 
