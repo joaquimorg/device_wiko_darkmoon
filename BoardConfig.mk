@@ -101,6 +101,7 @@ BOARD_USES_MTK_VPX_DEC := true
 
 #Bluetooth
 BOARD_HAVE_BLUETOOTH := true
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/generic/common/bluetooth
 
 # Tools
 # BOARD_CUSTOM_BOOTIMG_MK := device/wiko/darkmoon/releasetools/boot.mk

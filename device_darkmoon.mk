@@ -105,8 +105,9 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 #PRODUCT_PACKAGES += \
 #    libfmjni
 
-#PRODUCT_PACKAGES += \
-#    FMRadio
+PRODUCT_PACKAGES += \
+    FmRadio \
+    Nfc
 
 #copy gapps to ROM
 $(call inherit-product, device/wiko/darkmoon/gapps.mk)

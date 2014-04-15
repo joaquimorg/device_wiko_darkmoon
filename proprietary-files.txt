@@ -23,8 +23,12 @@ app/MTKThermalManager.apk
 app/MTKThermalManager.odex
 app/MtkBt.apk
 app/MtkBt.odex
-
-
+app/Stk1.apk
+app/Stk1.odex
+app/StkSelection.apk
+app/StkSelection.odex
+app/MediatekDM.apk
+app/MediatekDM.odex
 
 usr/keylayout/mtk-kpd.kl
 usr/keylayout/ACCDET.kl
