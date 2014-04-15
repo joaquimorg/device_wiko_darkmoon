@@ -10,9 +10,13 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/wiko/darkmoon/device_darkmoon.mk)
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 1280
+TARGET_SCREEN_WIDTH := 720
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := darkmoon
 PRODUCT_NAME := cm_darkmoon
 PRODUCT_BRAND := wiko
-PRODUCT_MODEL := darkmoon
+PRODUCT_MODEL := Wiko Darkmoon (joaquim.org)
 PRODUCT_MANUFACTURER := wiko
