@@ -26,7 +26,7 @@ PRODUCT_DEVICE := darkmoon
 
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/root/fstab:root/fstab \
+	$(LOCAL_PATH)/fstab:root/fstab \
 	$(LOCAL_PATH)/root/init.rc:root/init.rc \
 	$(LOCAL_PATH)/root/init.usb.rc:root/init.usb.rc \
 	$(LOCAL_PATH)/root/init.xlog.rc:root/init.xlog.rc \
@@ -102,12 +102,28 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.service.acm.enable=0 \
 	ro.mount.fs=EXT4
 
-#PRODUCT_PACKAGES += \
-#    libfmjni
-
 PRODUCT_PACKAGES += \
-    FmRadio \
-    Nfc
+	sh \
+    e2fsck \
+    tune2fs
+
+#PRODUCT_PACKAGES += \
+#    FmRadio
+
+# Live Wallpapers
+PRODUCT_PACKAGES += \
+    LiveWallpapers \
+    LiveWallpapersPicker \
+    VisualizationWallpapers
+
+
+# NFC Support
+#PRODUCT_PACKAGES += \
+#    libnfc \
+#    libnfc_jni \
+#    Nfc \
+#    Tag \
+#    com.android.nfc_extras
 
 #copy gapps to ROM
 $(call inherit-product, device/wiko/darkmoon/gapps.mk)

@@ -15,6 +15,8 @@
 # inherit from the proprietary version
 -include vendor/wiko/darkmoon/BoardConfigVendor.mk
 
+TARGET_SPECIFIC_HEADER_PATH := device/wiko/darkmoon/include
+
 TARGET_ARCH := arm
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := mt6582
@@ -60,7 +62,7 @@ BOARD_GPS_LIBRARIES := true
 
 TARGET_PROVIDES_INIT_RC := true
 
-WITH_DEXPREOPT := false
+WITH_DEXPREOPT := true
 
 #Webkit
 ENABLE_WEBGL := true
@@ -103,9 +105,10 @@ BOARD_USES_MTK_VPX_DEC := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/generic/common/bluetooth
 
-# Tools
-# BOARD_CUSTOM_BOOTIMG_MK := device/wiko/darkmoon/releasetools/boot.mk
-BOARD_CUSTOM_BOOTIMG_MK := device/wiko/darkmoon/releasetools/custom_bootimg.mk
+TARGET_RECOVERY_FSTAB := device/wiko/darkmoon/recovery.fstab
+
+# MK Boot Tools
+BOARD_CUSTOM_BOOTIMG_MK := device/wiko/darkmoon/releasetools/boot.mk
 
 #TARGET_RELEASETOOL_OTA_FROM_TARGET_SCRIPT := \
 #	device/wiko/darkmoon/releasetools/wiko_ota_from_target_files
