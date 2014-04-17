@@ -17,8 +17,14 @@ $. build/envsetup.sh
 
 $brunch cm_darkmoon-eng 
 
+-------------------------------
 
+==WORK IN PROGRESS.==
 
-WORK IN PROGRESS.
+Compiles - OK
+
+Boot - NotOK
+
+------------------------------
 
 Copyright 2014 - joaquim.org
