@@ -11,6 +11,12 @@ $cd device/wiko/darkmoon
 
 $./extract-files.sh
 ```
+
+Patch CyanogenMod Source :
+```bash
+$./device/wiko/darkmoon/patches/install.sh
+```
+
 Build :
 ```bash
 $. build/envsetup.sh
