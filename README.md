@@ -6,16 +6,16 @@ CyanogenMod CM-10.1 | Device configuration for the Wiko Darkmoon (MT6582)
 -------------------------------
 
 To build first get the files from working phone :
-```
-$**cd device/wiko/darkmoon**
+```bash
+$cd device/wiko/darkmoon
 
-$**./extract-files.sh**
+$./extract-files.sh
 ```
 Build :
-```
-$**. build/envsetup.sh**
+```bash
+$. build/envsetup.sh
 
-$**brunch cm_darkmoon-eng**
+$brunch cm_darkmoon-eng
 ```
 # ==== WORK IN PROGRESS ====
 
