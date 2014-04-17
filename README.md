@@ -1,30 +1,28 @@
-Device configuration for the Wiko Darkmoon (MT6582)
+CyanogenMod CM-10.1 | Device configuration for the Wiko Darkmoon (MT6582)
 ===============================
 
-Android 4.2.2 - cm-10.1
+### Android 4.2.2 - cm-10.1
 
 -------------------------------
 
 To build first get the files from working phone :
+```
+$**cd device/wiko/darkmoon**
 
-$cd device/wiko/darkmoon
-
-$./extract-files.sh
-
+$**./extract-files.sh**
+```
 Build :
+```
+$**. build/envsetup.sh**
 
-$. build/envsetup.sh
+$**brunch cm_darkmoon-eng**
+```
+# ==== WORK IN PROGRESS ====
 
-$brunch cm_darkmoon-eng 
+ * Compiles - **OK**
 
--------------------------------
-
-==WORK IN PROGRESS.==
-
-Compiles - OK
-
-Boot - NotOK
+ * Boot - **NotOK**
 
 ------------------------------
 
-Copyright 2014 - joaquim.org
+### Copyright 2014 - joaquim.org
