@@ -14,6 +14,10 @@ $(call inherit-product, device/wiko/darkmoon/device_darkmoon.mk)
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
+# Release data
+TARGET_NO_LIVEWALLPAPERS := false
+TARGET_BOOTANIMATION_NAME := 720
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := darkmoon
 PRODUCT_NAME := cm_darkmoon

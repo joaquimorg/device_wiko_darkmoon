@@ -50,6 +50,8 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 BOARD_NAND_PAGE_SIZE := 4096 -s 128
 
 TARGET_PREBUILT_KERNEL := device/wiko/darkmoon/kernel
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/mt_usb/gadget/lun%d/file
+BOARD_SDCARD_INTERNAL_DEVICE := /dev/block/mmcblk0p1
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
@@ -62,7 +64,7 @@ BOARD_GPS_LIBRARIES := true
 
 TARGET_PROVIDES_INIT_RC := true
 
-WITH_DEXPREOPT := true
+WITH_DEXPREOPT := false
 
 #Webkit
 ENABLE_WEBGL := true

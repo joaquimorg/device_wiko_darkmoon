@@ -13,35 +13,24 @@
 # limitations under the License.
 
 app/CDS_INFO.apk
-app/CDS_INFO.odex
 app/EngineerMode.apk
-app/EngineerMode.odex
 app/EngineerModeSim.apk
-app/EngineerModeSim.odex
 app/MTKLogger.apk
 app/MTKThermalManager.apk
-app/MTKThermalManager.odex
 app/MtkBt.apk
-app/MtkBt.odex
 app/Stk1.apk
-app/Stk1.odex
 app/StkSelection.apk
-app/StkSelection.odex
 app/MediatekDM.apk
-app/MediatekDM.odex
+
+framework/mediatek-common.jar
+framework/mediatek-framework.jar
+framework/mediatek-op.jar
+framework/mediatek-res.apk
+framework/mediatek-telephony-common.jar
+framework/secondary-framework.jar
 
 usr/keylayout/mtk-kpd.kl
 usr/keylayout/ACCDET.kl
-
-framework/mediatek-common.jar
-framework/mediatek-common.odex
-framework/mediatek-framework.jar
-framework/mediatek-framework.odex
-framework/mediatek-op.jar
-framework/mediatek-op.odex
-framework/mediatek-res.apk
-framework/mediatek-telephony-common.jar
-framework/mediatek-telephony-common.odex
 
 vendor/lib/drm/libdrmwvmplugin.so
 vendor/lib/libwvdrm_L3.so
@@ -100,30 +89,6 @@ etc/mtklog-config.prop
 etc/mtk_omx_core.cfg
 etc/pcba.ini
 etc/perfservicelist.txt
-
-etc/permissions/android.hardware.bluetooth.xml
-etc/permissions/android.hardware.camera.xml
-etc/permissions/android.hardware.faketouch.xml
-etc/permissions/android.hardware.location.gps.xml
-etc/permissions/android.hardware.microphone.xml
-etc/permissions/android.hardware.sensor.accelerometer.xml
-etc/permissions/android.hardware.sensor.compass.xml
-etc/permissions/android.hardware.sensor.light.xml
-etc/permissions/android.hardware.sensor.proximity.xml
-etc/permissions/android.hardware.telephony.gsm.xml
-etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml
-etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
-etc/permissions/android.hardware.touchscreen.multitouch.xml
-etc/permissions/android.hardware.touchscreen.xml
-etc/permissions/android.hardware.usb.accessory.xml
-etc/permissions/android.hardware.wifi.direct.xml
-etc/permissions/android.hardware.wifi.xml
-etc/permissions/android.software.sip.xml
-etc/permissions/com.google.android.maps.xml
-etc/permissions/com.google.android.media.effects.xml
-etc/permissions/com.google.widevine.software.drm.xml
-etc/permissions/handheld_core_hardware.xml
-etc/permissions/media_codecs.xml
 
 etc/player.cfg
 etc/radvd/radvd.conf
