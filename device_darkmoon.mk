@@ -13,7 +13,7 @@ DEVICE_PACKAGE_OVERLAYS += device/wiko/darkmoon/overlay
 LOCAL_PATH := device/wiko/darkmoon
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
-	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
+	LOCAL_KERNEL := $(LOCAL_PATH)/prebuilt/kernel
 else
 	LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
 endif
@@ -52,9 +52,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/fstab:root/fstab \
+	$(LOCAL_PATH)/root/init:root/init \
 	$(LOCAL_PATH)/root/init.rc:root/init.rc \
 	$(LOCAL_PATH)/root/init.usb.rc:root/init.usb.rc \
-	$(LOCAL_PATH)/root/init.xlog.rc:root/init.xlog.rc \
 	$(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
 	$(LOCAL_PATH)/root/meta_init.rc:root/meta_init.rc \
 	$(LOCAL_PATH)/root/meta_init.modem.rc:root/meta_init.modem.rc \
@@ -73,9 +73,17 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/root/sbchk:root/sbchk/sbchk \
 	$(LOCAL_PATH)/root/enableswap.sh:root/enableswap.sh
 
-
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/media_codecs.xml:system/etc/media_codecs.xml \
+	$(LOCAL_PATH)/media_profiles.xml:system/etc/media_profile.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
+	qemu.hw.mainkeys=0 \
+	dalvik.vm.dexopt-data-only=1 \
+	persist.sys.usb.config=mtp,adb \
+	ro.secure=0 \
+	ro.adb.secure=0 \
+	ro.debuggable=1 \
 	ro.mediatek.version.release=ALPS.JB5.MP.V1.6 \
 	ro.mediatek.platform=MT6582 \
 	ro.mediatek.chip_ver=S01 \
@@ -129,20 +137,18 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.service.acm.enable=0 \
 	ro.mount.fs=EXT4
 
+PRODUCT_TAGS += dalvik.gc.type-precise
+
+PRODUCT_PACKAGES += \
+	gsm0710muxd
+	
 PRODUCT_PACKAGES += \
 	sh \
     e2fsck \
     tune2fs \
     com.android.future.usb.accessory
 
-
-# NFC Support
-#PRODUCT_PACKAGES += \
-#    libnfc \
-#    libnfc_jni \
-#    Nfc \
-#    Tag \
-#    com.android.nfc_extras
-
 #copy gapps to ROM
 $(call inherit-product, device/wiko/darkmoon/gapps.mk)
+
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)

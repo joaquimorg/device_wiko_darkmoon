@@ -13,7 +13,7 @@ for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
     fi
 
     #copy from local folder
-    cp ~/dev/android/darkmoon/stockrom/system/$FILE $BASE/$FILE
+    cp ~/dev/android/darkmoon/backup/system/$FILE $BASE/$FILE
 
     #copy from device
     #adb pull /system/$FILE $BASE/$FILE
