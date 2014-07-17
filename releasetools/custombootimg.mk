@@ -11,6 +11,6 @@ $(INSTALLED_RECOVERYIMAGE_TARGET): $(MKBOOTIMG) \
 $(INSTALLED_BOOTIMAGE_TARGET): $(MKBOOTIMG) $(INTERNAL_BOOTIMAGE_FILES)
 	@echo ----- Making MTK boot image ------
 	$(call pretty,"Target boot image: $@")
-	perl device/wiko/darkmoon/releasetools/repack-MT65xx.pl -boot $(recovery_kernel) out/target/product/darkmoon/root $@ $(MKBOOTIMG)
+	perl device/wiko/darkmoon/releasetools/repack-MT65xx.pl -boot $(recovery_kernel) device/wiko/darkmoon/boot_ramdisk $@ $(MKBOOTIMG)
 	@echo ----- Made boot image -------- $@
 	$(hide) $(call assert-max-image-size,$@,$(BOARD_BOOTIMAGE_PARTITION_SIZE),raw)

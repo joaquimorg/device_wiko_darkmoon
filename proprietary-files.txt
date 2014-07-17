@@ -69,7 +69,7 @@ etc/player.cfg
 etc/radvd/radvd.conf
 etc/resmonwhitelist.txt
 
-etc/ril/oper.lis
+#etc/ril/oper.lis
 
 etc/settings-config.xml
 etc/throttle.sh

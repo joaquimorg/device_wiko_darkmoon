@@ -78,7 +78,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/media_profiles.xml:system/etc/media_profile.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	qemu.hw.mainkeys=0 \
+	qemu.hw.mainkeys=1 \
 	dalvik.vm.dexopt-data-only=1 \
 	persist.sys.usb.config=mtp,adb \
 	ro.secure=0 \
