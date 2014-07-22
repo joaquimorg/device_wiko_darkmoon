@@ -74,8 +74,8 @@ etc/resmonwhitelist.txt
 etc/settings-config.xml
 etc/throttle.sh
 
-etc/.tp/thermal.conf
-etc/.tp/thermal.off.conf
+#etc/.tp/thermal.conf
+#etc/.tp/thermal.off.conf
 
 etc/vold.fstab
 etc/vold.fstab.nand
@@ -90,8 +90,8 @@ etc/wide-dhcpv6/dhcp6s.conf
 etc/wifi/p2p_supplicant.conf
 etc/wifi/wpa_supplicant.conf
 
-etc/xlog-filter-default
-etc/xlog-filter-tags
+#etc/xlog-filter-default
+#etc/xlog-filter-tags
 
 lib/modules/ccci.ko
 lib/modules/ccci_plat.ko
@@ -158,14 +158,137 @@ lib/libwapi.so
 
 lib/libcam.utils.so
 lib/libcamera_client.so
+lib/libcam.campipe.so
+
+lib/libaed.so
+lib/libbluetooth_mtk.so
+
+lib/libterservice.so
+
+#vtservice
+#lib/libmtk_vt_service.so
+#lib/libvtmal.so
+#lib/libamrvt.so
+#lib/libblisrc.so
+#lib/libvt_custom.so
+#lib/libamr_wrap.so
+#lib/libawb_wrap.so
+#lib/libmedia.so	
+#lib/libvcodecdrv.so
+#lib/libvcodec_oal.so
+#lib/libvcodec_utility.so
+#lib/libbwc.so
+#lib/libsched.so
+#lib/libmp4enc_sa.ca7.so
+#lib/libvp8dec_sa.ca7.so
+#lib/libmtk_vt_swip.so
+#lib/libmtk_vt_client.so
+#lib/libmtk_vt_em.so
+#lib/libmtk_vt_utils.so
+
+#atcid
+lib/libwifitest.so
+
+#mediaserver
+#lib/libcam.paramsmgr.so
+#lib/libcamdrv.so
+#lib/libcameracustom.so
+#lib/libcam_camera_exif.so
+#lib/libmatv_cust.so
+#lib/libfeatureio.so
+#lib/libcamalgo.so
+#lib/lib3a.so
+#lib/libcam.client.so
+#lib/libJpgEncPipe.so
+#lib/libmtkjpeg.so
+#lib/libmpo.so
+#lib/libmpoencoder.so
+#lib/libcam.camadapter.so
+#lib/libimageio.so
+#lib/libimageio_plat_drv.so
+#lib/libcam.camshot.so
+#lib/libaccess_beautifier.so
+#lib/libaccess_skin_beauty.so
+#lib/libjpeg.so 
+#mediaserver audio ?
+#lib/libhardware_legacy.so
+#lib/libaudioflinger.so
+#lib/libwpa_client.so
+#lib/libspeech_enh_lib.so
+#lib/libaudiocustparam.so
+#lib/libaudiosetting.so
+#lib/libaudiocompensationfilter.so
+#lib/libbessound_mtk.so
+#lib/libcvsd_mtk.so
+
+#lib/libaudio.primary.default.so
+
+
+#testing
+lib/libtinyalsa.so
+#lib/libmtkbtextadpa2dp.so
+
+# CODECS ?
+#lib/libMtkOmxRawDec.so
+#lib/libmtkbtextpan.so
+#lib/libMtkOmxApeDec.so
+#lib/libMtkOmxVorbisDec.so
+#lib/libMtkOmxAacDec.so
+#lib/libmtkhdmi_jni.so
+#lib/libMtkOmxVdec.so
+#lib/libmtk_drvb.so
+#lib/libmtkbtextadp.so
+#lib/libmtk_vt_service.so
+#lib/libmtka2dp.so
+#lib/libMtkOmxAwbEnc.so
+#lib/libMtkVideoTranscoder.so
+#lib/libmtkjpeg.so
+#lib/libMtkOmxAMRNBDec.so
+#lib/libMtkOmxFlacDec.so
+#lib/libmtk_vt_utils.so
+#lib/libMtkOmxAdpcmEnc.so
+#lib/libmtk_vt_client.so
+#lib/libMtkOmxMp3Dec.so
+#lib/libmtkbtextadpa2dp.so
+#lib/libmtk_vt_em.so
+#lib/libMtkOmxAdpcmDec.so
+#lib/libMtkOmxAmrEnc.so
+#lib/libmtk_vt_swip.so
+#lib/libMtkOmxAMRWBDec.so
+#lib/libmtkplayer.so
+#lib/libMtkOmxVorbisEnc.so
+#lib/libMtkOmxCore.so
+#lib/libmtkbtextspp.so
+#lib/libMtkOmxVenc.so
+#lib/libMtkOmxAacEnc.so
+#lib/libMtkOmxG711Dec.so
+#
+# more testing libs 
+#lib/libacdk.so
+#lib/libft.so
+#lib/libmmfactoryutil.so
+#lib/libmediatek_exceptionlog.so
+#lib/libvtmal.so
+#lib/libamrvt.so
+#lib/libvt_custom.so
+#lib/libamr_wrap.so
+#lib/libawb_wrap.so
+
+#lib/libandroid_runtime.so
+#lib/libgraphite2.so
+#lib/libharfbuzz_ng.so
+#lib/libextjsr82.so
+#
+
+
 
 bin/6620_launcher
 bin/6620_wmt_concurrency
 bin/6620_wmt_lpbk
-#bin/aee
-#bin/aee_aed
-#bin/aee_core_forwarder
-#bin/aee_dumpstate
+bin/aee
+bin/aee_aed
+bin/aee_core_forwarder
+bin/aee_dumpstate
 bin/akmd09911
 bin/akmd8963
 bin/akmd8975
@@ -173,7 +296,7 @@ bin/ami304d
 bin/atcid
 bin/atci_service
 bin/badblocks
-bin/batterywarning
+#bin/batterywarning  # Build
 bin/bmm050d
 bin/boot_logo_updater
 bin/btconfig
@@ -191,7 +314,7 @@ bin/dualmdlogger
 bin/factory
 bin/fsck_msdos_mtk
 bin/geomagneticd
-bin/GoogleOtaBinder
+#bin/GoogleOtaBinder
 bin/hald
 bin/hdc
 bin/ipod
@@ -228,10 +351,10 @@ bin/s62xd
 bin/sdiotool
 #bin/send_bug
 bin/shutdown
-bin/sn
+#bin/sn # Build
 bin/superumount
 bin/terservice
-bin/thermal
+#bin/thermal # Build
 bin/thermald
 bin/thermal_manager
 bin/tiny_mkswap
@@ -239,9 +362,8 @@ bin/tiny_swapoff
 bin/tiny_swapon
 bin/tiny_switch
 bin/vtservice
-bin/wlan_loader
+#bin/wlan_loader #Build
 bin/wpa_supplicant
-bin/xlog
 bin/vold
 
 xbin/BGW

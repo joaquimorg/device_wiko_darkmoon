@@ -28,7 +28,6 @@ PRODUCT_DEVICE := darkmoon
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
-    frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.camera.xml:system/etc/permissions/android.hardware.camera.xml \
     frameworks/native/data/etc/android.hardware.faketouch.xml:system/etc/permissions/android.hardware.faketouch.xml \
@@ -50,32 +49,37 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml
 
 
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/fstab:root/fstab \
-	$(LOCAL_PATH)/root/init:root/init \
-	$(LOCAL_PATH)/root/init.rc:root/init.rc \
-	$(LOCAL_PATH)/root/init.usb.rc:root/init.usb.rc \
-	$(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
-	$(LOCAL_PATH)/root/meta_init.rc:root/meta_init.rc \
-	$(LOCAL_PATH)/root/meta_init.modem.rc:root/meta_init.modem.rc \
-	$(LOCAL_PATH)/root/factory_init.rc:root/factory_init.rc \
-	$(LOCAL_PATH)/root/init.protect.rc:root/init.protect.rc \
-	$(LOCAL_PATH)/root/init.aee.customer.rc:root/init.aee.customer.rc \
-	$(LOCAL_PATH)/root/init.charging.rc:root/init.charging.rc \
-	$(LOCAL_PATH)/root/init.no_ssd.rc:root/init.no_ssd.rc \
-	$(LOCAL_PATH)/root/init.project.rc:root/init.project.rc \
-	$(LOCAL_PATH)/root/init.trace.rc:root/init.trace.rc \
-	$(LOCAL_PATH)/root/meta_init.project.rc:root/meta_init.project.rc \
-	$(LOCAL_PATH)/root/ueventd.rc:root/ueventd.rc \
-	$(LOCAL_PATH)/root/e2fsck:root/sbin/e2fsck \
-	$(LOCAL_PATH)/root/tune2fs:root/sbin/tune2fs \
-	$(LOCAL_PATH)/root/sec_chk.sh:root/sbchk/sec_chk.sh \
-	$(LOCAL_PATH)/root/sbchk:root/sbchk/sbchk \
-	$(LOCAL_PATH)/root/enableswap.sh:root/enableswap.sh
+#PRODUCT_COPY_FILES += \
+#	$(LOCAL_PATH)/fstab:root/fstab \
+#	$(LOCAL_PATH)/root/init:root/init \
+#	$(LOCAL_PATH)/root/init.rc:root/init.rc \
+#	$(LOCAL_PATH)/root/init.usb.rc:root/init.usb.rc \
+#	$(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
+#	$(LOCAL_PATH)/root/meta_init.rc:root/meta_init.rc \
+#	$(LOCAL_PATH)/root/meta_init.modem.rc:root/meta_init.modem.rc \
+#	$(LOCAL_PATH)/root/factory_init.rc:root/factory_init.rc \
+#	$(LOCAL_PATH)/root/init.protect.rc:root/init.protect.rc \
+#	$(LOCAL_PATH)/root/init.aee.customer.rc:root/init.aee.customer.rc \
+#	$(LOCAL_PATH)/root/init.charging.rc:root/init.charging.rc \
+#	$(LOCAL_PATH)/root/init.no_ssd.rc:root/init.no_ssd.rc \
+#	$(LOCAL_PATH)/root/init.project.rc:root/init.project.rc \
+#	$(LOCAL_PATH)/root/init.trace.rc:root/init.trace.rc \
+#	$(LOCAL_PATH)/root/meta_init.project.rc:root/meta_init.project.rc \
+#	$(LOCAL_PATH)/root/ueventd.rc:root/ueventd.rc \
+#	$(LOCAL_PATH)/root/e2fsck:root/sbin/e2fsck \
+#	$(LOCAL_PATH)/root/tune2fs:root/sbin/tune2fs \
+#	$(LOCAL_PATH)/root/sec_chk.sh:root/sbchk/sec_chk.sh \
+#	$(LOCAL_PATH)/root/sbchk:root/sbchk/sbchk \
+#	$(LOCAL_PATH)/root/enableswap.sh:root/enableswap.sh
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/media_codecs.xml:system/etc/media_codecs.xml \
-	$(LOCAL_PATH)/media_profiles.xml:system/etc/media_profile.xml
+	$(LOCAL_PATH)/prebuilt/thermal.conf:system/etc/.tp/thermal.conf \
+	$(LOCAL_PATH)/prebuilt/thermal.off.conf:system/etc/.tp/thermal.off.conf \
+	$(LOCAL_PATH)/prebuilt/audio_effects.conf:system/etc/audio_effects.conf \
+	$(LOCAL_PATH)/prebuilt/audio_policy.conf:system/etc/audio_policy.conf \
+	$(LOCAL_PATH)/prebuilt/mtk_omx_core.cfg:system/etc/mtk_omx_core.cfg \
+	$(LOCAL_PATH)/prebuilt/media_codecs.xml:system/etc/permissions/media_codecs.xml \
+	$(LOCAL_PATH)/prebuilt/media_profiles.xml:system/etc/media_profile.xml
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	qemu.hw.mainkeys=1 \
@@ -140,12 +144,19 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_PACKAGES += \
-	gsm0710muxd
+	gsm0710muxd \
+	gsm0710muxdmd2 \
+	batterywarning \
+	libm4u \
+	lib_driver_cmd_mt66xx \
+	sn \
+	thermal \
+	wlan_loader
 	
 PRODUCT_PACKAGES += \
-	sh \
-    e2fsck \
-    tune2fs \
+	static_busybox  \
+	make_ext4fs  \
+	setup_fs  \
     com.android.future.usb.accessory
 
 #copy gapps to ROM

@@ -9,7 +9,7 @@ import /init.usb.rc
 import /init.trace.rc
 import /init.cm.rc
 
-import init.xlog.rc
+#import init.xlog.rc
 
 on early-init
 
@@ -53,7 +53,7 @@ on init
 
 sysclktz 0
 
-loglevel 6
+loglevel 8
     write /proc/bootprof "INIT: on init start"
 
 # setup the global environment
@@ -241,7 +241,7 @@ on fs_property:ro.mount.fs=UBIFS
 
 on fs
 
-   mount iso9660 loop@/system/mobile_toolkit/iAmCdRom.iso /mnt/cd-rom ro
+   #mount iso9660 loop@/system/mobile_toolkit/iAmCdRom.iso /mnt/cd-rom ro
 on post-fs
     # change sbchk permission before mounted as read-only
     mount rootfs rootfs / rw remount
@@ -694,7 +694,7 @@ on boot
    exec /remount.sh
 
     # xlog
-    start xlogboot
+    #start xlogboot
 
 # basic network init
     ifup lo
@@ -877,7 +877,8 @@ on boot
     setprop system_init.startsurfaceflinger 0
 
 # set comob chipid 6582
-		setprop persist.mtk.wcn.combo.chipid 0x6582
+	#setprop persist.mtk.wcn.combo.chipid 0x6582
+    setprop persist.mtk.wcn.combo.chipid 0x6620
 		
     class_start core
     class_start main
@@ -942,7 +943,7 @@ on property:ro.debuggable=1
 service adbd /sbin/adbd
     class core
     socket adbd stream 660 system system
-    disabled
+    #disabled
     seclabel u:r:adbd:s0
 
 # adbd on at boot in emulator
@@ -1317,9 +1318,9 @@ service extmdlogger /system/bin/extmdlogger
     user root
     group root radio
 
-service GoogleOtaAgent /system/bin/GoogleOtaBinder
-    user system
-    group system
+#service GoogleOtaAgent /system/bin/GoogleOtaBinder
+#    user system
+#    group system
 
 service mdlogger /system/bin/mdlogger
     class main
